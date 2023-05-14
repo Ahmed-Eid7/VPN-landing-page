@@ -1,0 +1,40 @@
+@import "./variable";
+
+.about {
+  padding-block: 10rem;
+
+  .btn {
+    box-shadow: 0 20px 40px 10px rgba($color: $redColor, $alpha: 0.25);
+  }
+}
+
+.about__breif {
+  align-items: center;
+}
+
+.about__title {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+
+  & span {
+    font-weight: 500;
+  }
+}
+
+.about__description {
+  font-size: 1.6rem;
+  color: $lightDarkColor;
+  margin-bottom: 5rem;
+
+  & span {
+    font-weight: $font-weight-500;
+  }
+}
+
+.about__image {
+  svg {
+    max-width: 600px;
+    width: 100%;
+  }
+}

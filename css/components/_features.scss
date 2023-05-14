@@ -1,0 +1,48 @@
+@import "./variable";
+
+.features {
+  align-items: center;
+  justify-items: center;
+  gap: 5rem;
+  padding-block: 10rem;
+
+  img {
+    width: 500px;
+    max-width: 100%;
+  }
+}
+
+.features__content {
+  width: 73%;
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: $blackColor;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: $lightDarkColor;
+    margin-block: 2rem;
+  }
+
+  ul {
+    li {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      color: $lightDarkColor;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/check-mark.svg");
+        background-position: center center;
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}

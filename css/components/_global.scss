@@ -1,0 +1,67 @@
+@import "./variable";
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.9;
+}
+
+.container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: 10rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.light-bg {
+  border: 1px solid $redColor;
+  border-radius: 50px;
+  color: $redColor;
+  transition: $transitionTiming;
+  padding: 1rem 4rem;
+}
+
+.light-bg:hover {
+  background-color: $redColor;
+  color: $whiteColor;
+}
+
+.dark-bg {
+  color: $whiteColor;
+  background-color: $redColor;
+  font-size: 1.6rem;
+  padding: 1.75rem 7rem;
+  border-radius: 10px;
+  font-weight: $font-weight-700;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1275px) {
+  html {
+    font-size: 8px;
+  }
+}

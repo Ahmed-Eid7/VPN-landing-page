@@ -1,0 +1,182 @@
+@import "./variable";
+
+.testimonials {
+  padding-block: 10rem 20rem;
+  background-color: #f2f2f2;
+  position: relative;
+
+  .grid {
+    grid-template-columns: repeat(3, 400px);
+    gap: 5rem;
+  }
+}
+
+.testimonials__header {
+  text-align: center;
+  width: 500px;
+  margin-inline: auto;
+
+  h2 {
+    font-size: 3.5rem;
+    color: $blackColor;
+    line-height: 1.6;
+    font-weight: $font-weight-500;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-block: 2rem 6rem;
+    color: $lightDarkColor;
+  }
+}
+
+.testimonials__opinion {
+  padding: 3rem;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+
+  &:first-child {
+    border-color: $redColor;
+  }
+
+  .testimonials__opinion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .person-info {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      img {
+        width: 50px;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.4rem;
+        color: $lightDarkColor;
+      }
+    }
+
+    .testimonial__opinion-rate {
+      font-size: 1.6rem;
+    }
+  }
+
+  q {
+    font-size: 1.6rem;
+    color: $blackColor;
+  }
+}
+
+.testimonials__control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6rem;
+
+  .swipe {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    li {
+      width: 15px;
+      height: 15px;
+      background-color: #dde0e4;
+      border-radius: 50%;
+      transition: $transitionTiming;
+      cursor: pointer;
+
+      &.active {
+        background-color: $redColor;
+        width: 45px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .direction {
+    display: flex;
+    gap: 2rem;
+
+    .left-arrow {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 2px solid $redColor;
+      cursor: pointer;
+    }
+
+    .right-arrow {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: $redColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.subscribe {
+  background-color: #f2f2f2;
+  position: absolute;
+  left: 50%;
+  bottom: -115px;
+  transform: translateX(-50%);
+
+  .container {
+    background-color: #fff;
+    max-width: 1140px;
+    width: 100%;
+    min-height: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 7rem;
+    border-radius: 10px;
+    box-shadow: 0 40px 40px 0px rgba($color: $shadowColor, $alpha: 0.05),
+      0 -2px 50px 0 rgba($color: $shadowColor, $alpha: 0.05);
+
+    .text {
+      line-height: 1.6;
+
+      h2 {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.6rem;
+        color: $lightDarkColor;
+      }
+    }
+
+    .btn {
+      box-shadow: 0 20px 40px 10px rgba($color: $redColor, $alpha: 0.25);
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .subscribe {
+    .container {
+      flex-direction: column;
+      gap: 3rem;
+      text-align: center;
+      font-size: 4rem;
+      padding: 5rem;
+    }
+  }
+}

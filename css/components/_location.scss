@@ -1,0 +1,40 @@
+@import "./variable";
+
+.location {
+  background-color: $sectionBackground;
+  text-align: center;
+  padding-block: 10rem;
+
+  h2 {
+    font-size: 3.5rem;
+    color: $blackColor;
+    font-weight: 500;
+    margin-inline: auto;
+  }
+
+  p {
+    font-size: 1.6rem;
+    margin-block: 2rem 15rem;
+    color: $lightDarkColor;
+    margin-inline: auto;
+  }
+
+  .map {
+    max-width: 1060px;
+    width: 50%;
+  }
+
+  .brands {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    margin-top: 8rem;
+
+    img {
+      max-width: 190px;
+      width: 100%;
+    }
+  }
+}

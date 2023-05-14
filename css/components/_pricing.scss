@@ -1,0 +1,95 @@
+@import "./variable";
+
+.pricing {
+  padding-block: 10rem;
+  background-color: $sectionBackground;
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem;
+  }
+}
+
+.pricing__header {
+  grid-column: 1/-1;
+  text-align: center;
+
+  h2 {
+    font-size: 3.5rem;
+    font-weight: $font-weight-500;
+    color: $blackColor;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: $lightDarkColor;
+    margin-bottom: 6rem;
+    width: 555px;
+    margin-inline: auto;
+  }
+}
+
+.pricing__plan {
+  text-align: center;
+  padding: 7rem 9rem 5rem;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 145px;
+    max-width: 100%;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: $font-weight-500;
+    padding-block: 3rem;
+  }
+
+  ul {
+    li {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 10px;
+        background-image: url("../../assets/check.png");
+        margin-right: 2.5rem;
+      }
+    }
+  }
+
+  .price {
+    margin-block: 13rem 2rem;
+    color: $lightDarkColor;
+    font-size: 2.5rem;
+
+    span {
+      font-weight: 500;
+      color: $blackColor;
+      display: inline-block;
+    }
+  }
+
+  .dark-bg {
+    border-radius: 50px;
+    padding: 1rem 4rem;
+    box-shadow: 0 20px 40px 10px rgba($color: $redColor, $alpha: 0.25);
+  }
+
+  &:last-child {
+    border: 2px solid $redColor;
+  }
+}
